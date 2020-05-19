@@ -56,19 +56,45 @@ Hybrid machine learning models combine strengths of various models or classifier
 ## Performance
 To evaluate the performance of all of the classifier models, the precision, recall and F1-Score. The metrics are as follows:
 
-### Naive Bayes'
+### Naive Bayes' 
+     
+<img src = "https://github.com/sakshidgoel/Bilingual-Sentiment-Analysis/blob/master/Screenshots/Naive-Bayes'.png" width="500">
 
 ### Bernouille's Naive Bayes'
+     
+<img src = "https://github.com/sakshidgoel/Bilingual-Sentiment-Analysis/blob/master/Screenshots/Bernouille's-Naive-Bayes'.png" width="500">
 
 ### Multinomial Naive Bayes'
+    
+<img src = "https://github.com/sakshidgoel/Bilingual-Sentiment-Analysis/blob/master/Screenshots/Multinomial-Naive-Bayes'.png" width="500">
 
 ### Logistic Regression
+    
+<img src = "https://github.com/sakshidgoel/Bilingual-Sentiment-Analysis/blob/master/Screenshots/Logistic-Regression.png" width="500">
 
 ### Stochastic Gradient Descent
+     
+<img src = "https://github.com/sakshidgoel/Bilingual-Sentiment-Analysis/blob/master/Screenshots/Stochastic-Gradient-Descent.png" width="500">
 
 ### Support Vector Machine
+    
+<img src = "https://github.com/sakshidgoel/Bilingual-Sentiment-Analysis/blob/master/Screenshots/Support-Vector-Machine.png" width="500">
 
 ### Maximum Entropy
+     
+<img src = "https://github.com/sakshidgoel/Bilingual-Sentiment-Analysis/blob/master/Screenshots/Maximum-Entropy.png" width="500">
+
+### Hybrid Model
+     
+<img src = "https://github.com/sakshidgoel/Bilingual-Sentiment-Analysis/blob/master/Screenshots/Hybrid-Model.png" width="500">
+
+## Accuracy
+     
+The graph showing comparison of the accuracies of each of the classifiers is as follows:  
+    
+<img src = "https://github.com/sakshidgoel/Bilingual-Sentiment-Analysis/blob/master/Screenshots/Accuracies-Graph.png" width="500">
+   
+As it can be observed, the hybrid model performs the best out of all the classifiers, fulfilling its purpose.
 
 ## Confusion Matrix
 The confusion matrix for the hybrid model before and after normalization have been shown below:
