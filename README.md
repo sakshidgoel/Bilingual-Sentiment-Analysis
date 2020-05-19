@@ -12,20 +12,37 @@ Bilingual Sentiment Analysis is a subset of multilingual sentiment analysis whic
 Code in sociolinguistics refers to a language or a language variety. Code-mixing can be defined as simply mixing of two or more varieties of the same language or of different languages altogether. Example of Code-Mixed Hindi-English text is – “tu apne saath college bag leja raha hai?” or “arey waah! I am very proud of you”. 
 
 ## Dataset
-The dataset that was used was obtained from “Kaggle” called the [Sentiment140 dataset](https://www.kaggle.com/kazanova/sentiment140). It contains 1,600,000 tweets extracted using the twitter API. The tweets have been annotated (0 = negative, 2 = neutral, 4 = positive) and they can be used to detect sentiment. But only 40000 rows where randomly selected from this dataset, with equal distribution of positive and negative tweets, i.e. neutral tweets were ignored as this study focuses on binary classification. 
+The dataset that was used was obtained from “Kaggle” called the [Sentiment140 dataset](https://www.kaggle.com/kazanova/sentiment140). 
+The dataset snpashot has been attached below for reference -
+    
+<img src = "https://github.com/sakshidgoel/Bilingual-Sentiment-Analysis/blob/master/Screenshots/Initial-Dataset.png" width="1000">
+       
+It contains 1,600,000 tweets extracted using the twitter API. The tweets have been annotated (0 = negative, 2 = neutral, 4 = positive) and they can be used to detect sentiment. But only 40000 rows where randomly selected from this dataset, with equal distribution of positive and negative tweets, i.e. neutral tweets were ignored as this study focuses on binary classification. 
 
 ## Data Preprocessing
-In order to make sure that the work was carried out in the most efficient manner, the dataset used needed to be preprocessed before actual usage.
+In order to make sure that the work was carried out in the most efficient manner, the dataset used needed to be preprocessed before actual usage. The following flow chart depicts the data pre-processing procedure:
+  
+<p align="center">
+<img src = "https://github.com/sakshidgoel/Bilingual-Sentiment-Analysis/blob/master/Screenshots/Preprocessing-Algorithm.jpg" height="500">
+</p>
 
 ### Data Cleaning
-1) First, only a handful of columns were used from the set of 6 columns. These columns used were *Tweet* and *Label*. The remaining columns were discarded as they were not needed.  
+1) First, only a handful of columns were used from the set of 6 columns. These columns used were *Tweet* and *Label*. The remaining columns were discarded as they were not needed. Now, this is how the dataset looks:
+    
+<img src = "https://github.com/sakshidgoel/Bilingual-Sentiment-Analysis/blob/master/Screenshots/Drop-Unwanted-Columns.png" width="500">
+      
 2) Next, any HTML tags present in the text were removed with the help of BeautifulSoup package. Quotation marks ( ‘, “) and URLs were removed as they are unnecessary for the sentiment analysis of the text. If any emoticons were used in the tweet, they were converted into their equivalent emotion that they are intended to signify, and the emojis were removed.
 3) Then, all the words in the text are converted to lower case and repeating words in the same tweet are removed. 
 4) Concatenated words, i.e. words which were joined such as “Can’t” were expanded to “Can not”.
 5) The data cleaning process also included the removal of punctuations, numbers, special characters and user handles or tags (“@” symbol followed by the account handle). Stopwords, other than ‘not’ and the word ‘is’ were also removed from the text. 
-6) The cleaned tweet contained corrected spellings of all words, because of the use of the ‘SpellChecker’ package. All words with length equal to one were also removed. 
+6) The cleaned tweet contained corrected spellings of all words, because of the use of the ‘SpellChecker’ package. All words with length equal to one were also removed. The cleaned tweets look like the following:
+    
+<img src = "https://github.com/sakshidgoel/Bilingual-Sentiment-Analysis/blob/master/Screenshots/After-Data-Cleaning.png" width="900">
+     
 7) Next, the words were lemmatized, and words preceded  by ‘not’ were substituted by their antonyms to represent the negation effect. 
-Finally, the dataset contained the cleaned tweets.
+Finally, the dataset contained the cleaned tweets. The final dataset looks like the following:
+   
+<img src = "https://github.com/sakshidgoel/Bilingual-Sentiment-Analysis/blob/master/Screenshots/Final-Dataset.png" width="700">
 
 ### Feature Extraction
 Certain features, like adjectives, abstract nouns, and adverbs were focused on and the rest of the words were removed as they did not add any value to the sentiment. This was done as part for the feature identification and extraction. 
